@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.5.5"
+  version: "1.5.6"
 
 package:
   name: reachy-mini-motor-controller
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/r/reachy-mini-motor-controller/reachy_mini_motor_controller-${{ version }}.tar.gz
-  sha256: 29959d4e0a5fb0c8a49ee3d9883debe841efebb7d670f47821172fc724524846
+  sha256: 98cb6e9e48dbcb3e4c3649aef418ca8cafea9056a00501c35dea7e86a3a3ec65
 
 build:
-  number: 1
+  number: 0
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
